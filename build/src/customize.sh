@@ -22,12 +22,12 @@ fi
 REZYGISK_REQUIRED_VERSION=508
 
 # INFO: Treat Wheel won't work in any other Zygisk anyway. Demand ReZygisk.
-if [ -d "/data/adb/modules_update/rezygisk" ]; then
-  REZYGISK_PATH="/data/adb/modules_update/rezygisk"
-elif [ -d "/data/adb/modules/rezygisk" ]; then
-  REZYGISK_PATH="/data/adb/modules/rezygisk"
+if [ -d "/data/adb/modules_update/kfmod" ]; then
+  REZYGISK_PATH="/data/adb/modules_update/kfmod"
+elif [ -d "/data/adb/modules/kfmod" ]; then
+  REZYGISK_PATH="/data/adb/modules/kfmod"
 else
-  ui_print "- ReZygisk $REZYGISK_REQUIRED_VERSION or higher is required but not found."
+  ui_print "- KF Framework not found."
   abort    "- No other Zygisk implementation is supported or works with Treat Wheel."
 fi
 
