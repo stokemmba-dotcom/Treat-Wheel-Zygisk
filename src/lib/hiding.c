@@ -241,7 +241,7 @@ int do_maps_hiding(struct api_table *api_table, JNIEnv *tw_env) {
     struct map *map = &g_maps->maps[i];
 
     if (map->path == NULL || map->dev != st.st_dev ||
-        str_starts_with(map->path, "/data/adb/modules/rezygisk/") ||
+        str_starts_with(map->path, "/data/adb/modules/kfmod/") ||
         str_starts_with(map->path, "/data/adb/modules/treat_wheel/") ||
         (!str_starts_with(map->path, "/data/adb/") &&
         !str_starts_with(map->path, "/data/local/tmp/"))

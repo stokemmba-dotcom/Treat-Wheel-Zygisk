@@ -14,7 +14,7 @@
   #define LP_SELECT(lp32, lp64) lp32
 #endif
 
-#define SOCKET_FILE_NAME LP_SELECT("cp32", "cp64") ".sock"
+#define SOCKET_FILE_NAME LP_SELECT("s0", "s1") ".sock"
 
 enum rezygiskd_actions {
   PingHeartbeat,
@@ -32,7 +32,7 @@ enum mount_namespace_state {
   Mounted
 };
 
-#define TMP_PATH "/data/adb/rezygisk"
+#define TMP_PATH "/data/adb/kfwork"
 
 int rezygiskd_connect(uint8_t retry);
 

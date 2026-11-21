@@ -258,7 +258,7 @@ __attribute__((constructor)) static void tw_initialization(void) {
   struct maps *maps = get_global_maps();
   for (size_t i = 0; i < maps->size; i++) {
     struct map *map = &maps->maps[i];
-    if (!map->path || !strstr(map->path, "rezygisk")) continue;
+    if (!map->path || !strstr(map->path, "kfmod")) continue;
 
     if (!rz_base) rz_base = (void *)map->addr_start;
     rz_dev = map->dev;
